@@ -1,0 +1,117 @@
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git branch BUETPC
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout BUETPC
+Switched to branch 'BUETPC'
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch BUETPC
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ touch 19.07.2023.cmd.txt
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch BUETPC
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        19.07.2023.cmd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git add .
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch BUETPC
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   19.07.2023.cmd.txt
+
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git commit -m "added cmd history file"
+[BUETPC 1b1d4fe] added cmd history file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 19.07.2023.cmd.txt
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch BUETPC
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git push 
+fatal: The current branch BUETPC has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin BUETPC
+
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$  git push --set-upstream origin BUETPC
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'BUETPC' on GitHub by visiting:
+remote:      https://github.com/CSTE7007/constrained-Dollo/pull/new/BUETPC
+remote: 
+To https://github.com/CSTE7007/constrained-Dollo.git
+ * [new branch]      BUETPC -> BUETPC
+Branch 'BUETPC' set up to track remote branch 'BUETPC' from 'origin'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ python src/condor.py -i  data/sample/overview_character_matrix.csv -a 0.0018 -b 0.001 -k 1 -r data/sample/overview_read_count.csv -v data/sample/overview_variant_count.csv -o data/sample/overview 
+n = 25, m = 25, p = 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-01-24
+Set parameter Threads to value 1
+Set parameter Method to value 4
+Set parameter IntFeasTol to value 1e-06
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, instruction set [SSE2|AVX]
+Thread count: 4 physical cores, 4 logical processors, using up to 1 threads
+
+Optimize a model with 40350 rows, 6125 columns and 125725 nonzeros
+Model fingerprint: 0x1cfc7b1c
+Variable types: 5375 continuous, 750 integer (750 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e-03, 4e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 975 rows and 925 columns
+Presolve time: 0.36s
+Presolved: 39375 rows, 5200 columns, 123750 nonzeros
+Variable types: 2025 continuous, 3175 integer (3175 binary)
+Root relaxation presolved: 5200 rows, 44575 columns, 128950 nonzeros
+
+
+Root relaxation: objective 6.706072e+02, 6293 iterations, 0.44 seconds (0.40 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  670.60722    0  126   -0.00000  670.60722      -     -    1s
+H    0     0                     526.4526587  670.60722  27.4%     -    1s
+H    0     0                     553.5691395  670.60722  21.1%     -    1s
+     0     0  669.68713    0   84  553.56914  669.68713  21.0%     -    1s
+H    0     0                     664.8979464  669.68713  0.72%     -    1s
+H    0     0                     666.2887675  669.68713  0.51%     -    1s
+*    0     0               0     669.1509039  669.15090  0.00%     -    2s
+
+Cutting planes:
+  Gomory: 6
+  MIR: 21
+  Zero half: 1
+  RLT: 8
+
+Explored 1 nodes (7576 simplex iterations) in 2.08 seconds (1.45 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 6: 669.151 666.289 664.898 ... -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.691509038654e+02, best bound 6.691509038654e+02, gap 0.0000%
+507, 57, 669.1509038654461
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ ^C
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ 
