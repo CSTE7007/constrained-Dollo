@@ -61,5 +61,5 @@ An example of usage is as follows.
 <h2>**An example of usage with only bash command**</h2>
 
   ```
-  bash condor.sh data/sample/overview_character_matrix.csv data/sample/overview_read_count.csv data/sample/overview_variant_count.csv data/output
+  bash condor.sh data/sample/overview_character_matrix.csv data/sample/overview_read_count.csv data/sample/overview_variant_count.csv data/sample/overview 
   ```
