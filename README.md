@@ -57,3 +57,9 @@ python src/simulation_reads.py -n 25 -m 25 -p 5 -k 1 -s 0 -d 0.1 -a 0.001 -b 0.0
 An example of usage is as follows.
 
     $ python src/condor.py -i  data/sample/overview_character_matrix.csv -a 0.0018 -b 0.001 -k 1 -r data/sample/overview_read_count.csv -v data/sample/overview_variant_count.csv -o data/sample/overview 
+
+<h2>**An example of usage with only bash command**</h2>
+
+  ```
+  bash condor.sh data/sample/overview_character_matrix.csv data/sample/overview_read_count.csv data/sample/overview_variant_count.csv data/output
+  ```
