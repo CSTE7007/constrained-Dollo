@@ -1,0 +1,63 @@
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git branch -r
+  origin/BUETPC
+  origin/HEAD -> origin/main
+  origin/main
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git branch BUETPC
+fatal: A branch named 'BUETPC' already exists.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout BUETPC
+Already on 'BUETPC'
+Your branch is up to date with 'origin/BUETPC'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ touch condor.sh
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        condor.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git add condor.sh
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git commit -m "added bash executable code"
+[main f9008f8] added bash executable code
+ 1 file changed, 39 insertions(+)
+ create mode 100644 condor.sh
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git add README.md 
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git commit -m "updated README.md with bash executable code" 
+[main d74a1ff] updated README.md with bash executable code
+ 1 file changed, 5 insertions(+)
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.33 KiB | 1.33 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/CSTE7007/constrained-Dollo.git
+   7145788..d74a1ff  main -> main
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout BUETPC
+Switched to branch 'BUETPC'
+Your branch is up to date with 'origin/BUETPC'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git checkout BUETPC
+Switched to branch 'BUETPC'
+Your branch is up to date with 'origin/BUETPC'.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ 
