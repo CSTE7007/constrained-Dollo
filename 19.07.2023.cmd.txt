@@ -649,3 +649,192 @@ real    48m33.824s
 user    48m14.648s
 sys     0m18.723s
 (base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ 
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git status
+On branch BUETPC
+Your branch is up to date with 'origin/BUETPC'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   19.07.2023.cmd.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        data/CRC/19.07.2023_CRC_B.csv
+        data/CRC/19.07.2023_CRC_tree.dot
+        data/CRC/19.07.2023_CRC_tree.newick
+        data/CRC/19.07.2023_CRC_tree_without_cells.dot
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git add .
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git commit -m "Added 19.07.2023_CRC for running cmf for CRC2 dataset"
+[BUETPC 0dd965a] Added 19.07.2023_CRC for running cmf for CRC2 dataset
+ 5 files changed, 1182 insertions(+)
+ create mode 100644 data/CRC/19.07.2023_CRC_B.csv
+ create mode 100644 data/CRC/19.07.2023_CRC_tree.dot
+ create mode 100644 data/CRC/19.07.2023_CRC_tree.newick
+ create mode 100644 data/CRC/19.07.2023_CRC_tree_without_cells.dot
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git push
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ git push
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 12.16 KiB | 4.05 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/CSTE7007/constrained-Dollo.git
+   63ce82e..0dd965a  BUETPC -> BUETPC
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ ^C
+
+############ Plotting Tree For example data ###############################
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ dot -Tpdf data/sample/overview_19.07.2023_tree.dot -o overview_19.07.2023_tree.dot.pdf -v
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  51 nodes 50 edges maxiter=2147483647 balance=1
+network simplex: 51 nodes 50 edges 0 iter 0.00 sec
+Maxrank = 7, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  101 nodes 143 edges maxiter=2147483647 balance=2
+network simplex: 101 nodes 143 edges 31 iter 0.00 sec
+routesplines: 50 edges, 150 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.01 secs.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ dot -Tpdf data/sample/overview_19.07.2023_tree_without_cells.dot -o overview_19.07.2023_tree_without_cells.dot.pdf -v
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  26 nodes 25 edges maxiter=2147483647 balance=1
+network simplex: 26 nodes 25 edges 0 iter 0.00 sec
+Maxrank = 6, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  51 nodes 69 edges maxiter=2147483647 balance=2
+network simplex: 51 nodes 69 edges 11 iter 0.00 sec
+routesplines: 25 edges, 75 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.01 secs.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ 
+
+############ Plotting Tree For CRC data ###############################
+
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ dot -Tpdf data/CRC/19.07.2023_CRC_tree_without_cells.dot -o 19.07.2023_CRC_tree_without_cells.dot.pdf -v
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  43 nodes 42 edges maxiter=2147483647 balance=1
+network simplex: 43 nodes 42 edges 0 iter 0.00 sec
+Maxrank = 34, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  85 nodes 92 edges maxiter=2147483647 balance=2
+network simplex: 85 nodes 92 edges 4 iter 0.00 sec
+routesplines: 42 edges, 126 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.01 secs.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ dot -Tpdf data/CRC/19.07.2023_CRC_tree.dot -o 19.07.2023_CRC_tree.dot.pdf -v
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  229 nodes 228 edges maxiter=2147483647 balance=1
+network simplex: 229 nodes 228 edges 0 iter 0.00 sec
+Maxrank = 35, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  457 nodes 649 edges maxiter=2147483647 balance=2
+network simplex: 457 nodes 649 edges 83 iter 0.00 sec
+routesplines: 228 edges, 684 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.04 secs.
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/19072023/constrained-Dollo$ 
