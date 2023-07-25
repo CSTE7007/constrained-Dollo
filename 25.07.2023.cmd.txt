@@ -1,0 +1,144 @@
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/Workspace/19072023/constrained-Dollo$ git status
+On branch BUETPC
+Your branch is up to date with 'origin/BUETPC'.
+
+nothing to commit, working tree clean
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/Workspace/19072023/constrained-Dollo$ mkdir data/sample25072023
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/Workspace/19072023/constrained-Dollo$ time python src/simulation_rea
+ds.py -n 25 -m 25 -p 5 -k 1 -s 0 -d 0.1 -a 0.001 -b 0.001 -o data/sample25072023/overview
+
+real    0m5.625s
+user    0m1.004s
+sys     0m0.136s
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/Workspace/19072023/constrained-Dollo$ time  bash condor.sh data/sample25072
+023/overview_character_matrix.csv data/sample25072023/overview_read_count.csv data/sample25072023/overview_variant_cou
+nt.csv data/sample25072023/overview 
+n = 25, m = 25, p = 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-01-24
+Set parameter Threads to value 1
+Set parameter Method to value 4
+Set parameter IntFeasTol to value 1e-06
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, instruction set [SSE2|AVX]
+Thread count: 4 physical cores, 4 logical processors, using up to 1 threads
+
+Optimize a model with 40350 rows, 6125 columns and 125725 nonzeros
+Model fingerprint: 0x1cfc7b1c
+Variable types: 5375 continuous, 750 integer (750 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e-03, 4e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 975 rows and 925 columns
+Presolve time: 0.44s
+Presolved: 39375 rows, 5200 columns, 123750 nonzeros
+Variable types: 2025 continuous, 3175 integer (3175 binary)
+Root relaxation presolved: 5200 rows, 44575 columns, 128950 nonzeros
+
+
+Root relaxation: objective 6.706072e+02, 6293 iterations, 0.49 seconds (0.40 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  670.60722    0  126   -0.00000  670.60722      -     -    1s
+H    0     0                     526.4526587  670.60722  27.4%     -    1s
+H    0     0                     553.5691395  670.60722  21.1%     -    1s
+     0     0  669.68713    0   84  553.56914  669.68713  21.0%     -    1s
+H    0     0                     664.8979464  669.68713  0.72%     -    1s
+H    0     0                     666.2887675  669.68713  0.51%     -    2s
+*    0     0               0     669.1509039  669.15090  0.00%     -    2s
+
+Cutting planes:
+  Gomory: 6
+  MIR: 21
+  Zero half: 1
+  RLT: 8
+
+Explored 1 nodes (7576 simplex iterations) in 2.20 seconds (1.45 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 6: 669.151 666.289 664.898 ... -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.691509038654e+02, best bound 6.691509038654e+02, gap 0.0000%
+507, 57, 669.1509038654461
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  51 nodes 50 edges maxiter=2147483647 balance=1
+network simplex: 51 nodes 50 edges 0 iter 0.00 sec
+Maxrank = 7, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  101 nodes 143 edges maxiter=2147483647 balance=2
+network simplex: 101 nodes 143 edges 31 iter 0.00 sec
+routesplines: 50 edges, 150 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.01 secs.
+dot - graphviz version 2.40.1 (20161225.0304)
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+libdir = "/usr/lib/x86_64-linux-gnu/graphviz"
+Activated plugin library: libgvplugin_dot_layout.so.6
+Using layout: dot:dot_layout
+The plugin configuration file:
+        /usr/lib/x86_64-linux-gnu/graphviz/config6a
+                was successfully loaded.
+    render      :  cairo dot dot_json fig gd json json0 map mp pic pov ps svg tk vml vrml xdot xdot_json
+    layout      :  circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    textlayout  :  textlayout
+    device      :  bmp canon cmap cmapx cmapx_np dot dot_json eps fig gd gd2 gif gtk gv ico imap imap_np ismap jpe jpeg jpg json json0 mp pdf pic plain plain-ext png pov ps ps2 svg svgz tif tiff tk vml vmlz vrml wbmp x11 xdot xdot1.2 xdot1.4 xdot_json xlib
+    loadimage   :  (lib) bmp eps gd gd2 gif ico jpe jpeg jpg png ps svg xbm
+pack info:
+  mode   undefined
+  size   0
+  flags  0
+  margin 8
+pack info:
+  mode   node
+  size   0
+  flags  0
+fontname: "Times-Roman" resolved to: (ps:pango  Nimbus Roman No9 L,  REGULAR) (PangoCairoFcFont) "Nimbus Roman No9 L, Regular" /usr/share/fonts/X11/Type1/n021003l.pfb
+network simplex:  26 nodes 25 edges maxiter=2147483647 balance=1
+network simplex: 26 nodes 25 edges 0 iter 0.00 sec
+Maxrank = 6, minrank = 0
+mincross: pass 0 iter 0 trying 0 cur_cross 0 best_cross 0
+mincross N: 0 crossings, 0.00 secs.
+network simplex:  51 nodes 69 edges maxiter=2147483647 balance=2
+network simplex: 51 nodes 69 edges 11 iter 0.00 sec
+routesplines: 25 edges, 75 boxes 0.00 sec
+Using render: cairo:cairo
+Using device: pdf:cairo:cairo
+gvRenderJobs N: 0.00 secs.
+
+real    0m22.633s
+user    0m4.746s
+sys     0m0.296s
+(base) user@saqib-HP-Pro-3340-MT:~/Desktop/Workspace/19072023/constrained-Dollo$ 
